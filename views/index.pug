@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  input(type='text' id='gist-input')
+  button(id='btn') Load Gist
+  div(id='chartContainer')
+  script(src="javascripts/vendors/fusioncharts/fusioncharts.js")
+  script(src="javascripts/fc-gist.js")
