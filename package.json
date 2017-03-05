@@ -3,7 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "babel-node ./bin/www",
+    "test": "eslint bin && flow && jest --coverage",
+    "precommit": "yarn test",
+    "prepush": "yarn test"
   },
   "dependencies": {
     "body-parser": "~1.16.0",
@@ -16,6 +19,24 @@
     "stylus": "0.54.5"
   },
   "devDependencies": {
-    "ramda": "^0.23.0"
-  }
+    "babel-cli": "^6.23.0",
+    "babel-eslint": "^7.1.1",
+    "babel-jest": "^19.0.0",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-latest": "^6.22.0",
+    "eslint": "^3.17.0",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-flowtype": "^2.30.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.0",
+    "flow-bin": "^0.41.0",
+    "husky": "^0.13.2",
+    "jest": "^19.0.2"
+  },
+  "description": "Execute and view gist snippets",
+  "main": "./bin/www",
+  "repository": "git@github.com:n0x3u5/gist-view.git",
+  "author": "Nakshatra Mukhopadhyay",
+  "license": "MIT"
 }

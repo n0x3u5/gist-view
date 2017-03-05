@@ -8,6 +8,10 @@ var app = require('../app');
 var debug = require('debug')('fc-gist-view:server');
 var http = require('http');
 
+import Dog from './dog';
+var toby = new Dog('Toby');
+console.log(toby.bark());
+
 /**
  * Get port from environment and store in Express.
  */
