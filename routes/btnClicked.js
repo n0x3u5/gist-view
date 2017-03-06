@@ -1,19 +1,14 @@
-var express = require('express');
-var router = express.Router();
-var http = require('http');
+const express = require('express')
 
-router.use('/', function (req, res, next) {
-  next();
-});
+const router = express.Router()
 
-router.post('/', function(req, res, next) {
-  console.log(req);
-  res.send('Post received!');
-});
+router.use('/', (req, res, next) => { next() })
 
-router.get('/:user', function(req, res, next) {
-  let user = req.params.user;
-  res.send(user);
-});
+router.post('/', (req, res) => { res.send('Post received!') })
 
-module.exports = router;
+router.get('/:user', (req, res) => {
+  const user = req.params.user
+  res.send(user)
+})
+
+module.exports = router

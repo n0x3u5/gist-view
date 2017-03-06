@@ -4,13 +4,16 @@
     "plugin:flowtype/recommended"
   ],
   "env": {
-    "jest": true
+    "jest": true,
+    "browser": true
   },
   "plugins": [
     "flowtype"
   ],
   "rules": {
-    "semi": [2, 'never'],
-    "no-unexpected-multiline": 2
+    "semi": ["error", 'never'],
+    "no-unexpected-multiline": "error",
+    "no-param-reassign": ["error", { "props": false }],
+    "no-eval": "warn"
   }
 }
